@@ -1,14 +1,16 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import { BrowserRouter, Route,Switch, Link } from 'react-router-dom'
+import 'materialize-css/dist/css/materialize.min.css';
+import Dashboard from './containers/Dashboard'
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <h1>tShirtShop</h1>
-      </header>
-    </div>
+    <BrowserRouter>
+          <Switch>
+              <Route exact path="/" component={Dashboard}/>
+          </Switch>
+      </BrowserRouter>
   );
 }
 
